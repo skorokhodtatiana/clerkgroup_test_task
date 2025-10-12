@@ -1,0 +1,42 @@
+$footer-bg: #272733;
+$blue-color: #3E9CDC;
+
+.processing {
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	// justify-content: center;
+	background-image: url('../../assets/images/footer-bg.svg');
+	background-color: $footer-bg;
+	background-size: cover;
+
+	&__title {
+		padding-top: 94px;
+		color: white;
+		//padding-top: 84px;
+		font-size: 36px;
+
+		&_blue {
+			color: $blue-color;
+		}
+	}
+
+	&__title-second {
+		color: white;
+	}
+
+	&__steps {
+		display: flex;
+	}
+
+	&__button {
+		width: 370px;
+		height: 48px;
+		background-color: $blue-color;
+		color: white;
+		border: 1px solid white;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+}

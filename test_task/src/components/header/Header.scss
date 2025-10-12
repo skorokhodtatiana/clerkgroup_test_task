@@ -1,0 +1,35 @@
+$background-black: #10101DE5;
+$blue-color: #3E9CDC;
+
+@font-face {
+	font-family: 'Raleway';
+	// todo сделать алиас
+	src: url('../../assets/fonts/Raleway');
+	// font-weight: 800;
+}
+
+.header {
+	display: flex;
+	justify-content: space-around;
+	// justify-content: space-between;
+	align-items: center;
+
+	position: sticky;
+	top: 0;
+	z-index: 2;
+
+	background-color: $background-black;
+	opacity: 90%;
+
+	&__logo {
+		padding: 34px 0 34px 46px;
+		color: white;
+		font-family: 'Raleway', sans-serif;
+		font-size: 28px;
+		font-weight: 800;
+
+		&_blue {
+			color: $blue-color;
+		}
+	}
+}

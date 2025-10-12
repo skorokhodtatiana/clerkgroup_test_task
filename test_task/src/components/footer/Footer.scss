@@ -1,0 +1,43 @@
+$footer-bg: #3D4050;
+$footer-item: #C3C3C3;
+
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2rem 18rem;
+	font-size: 13px;
+	background-color: $footer-bg;
+
+	&__verticle-line {
+		height: 18px;
+		border-left: 1px solid $footer-item;
+	}
+
+	&__author {
+		padding-right: 14px;
+		color: white;
+	}
+
+	&__item {
+		display: flex;
+		color: $footer-item;
+	}
+
+	&__item-img {
+		margin-right: 10px;
+	}
+
+	&__link {
+		display: flex;
+		color: $footer-item;
+		text-decoration: none;
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: white;
+			text-decoration: underline;
+		}
+	}
+}

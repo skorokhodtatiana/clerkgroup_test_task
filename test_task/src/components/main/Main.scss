@@ -1,0 +1,70 @@
+$blue-color: #3E9CDC;
+
+@font-face {
+	font-family: 'Lato-bold';
+	src: url(../../assets/fonts/Lato/Lato-Bold.ttf);
+}
+
+// @font-face {
+// 	font-family: 'Lato';
+// 	src: url(../../assets/fonts/Lato/Lato-Regular.ttf);
+// }
+
+.main {
+	display: flex;
+	flex-direction: column;
+	//align-items: center;
+	padding-left: 18rem;
+	padding-bottom: 204px;
+	//font-weight: 800;
+	
+	// background-image: url('../../assets/images/main.jpg');
+
+	&__title {
+		// margin-bottom: 90px;
+		// margin-top: 100px;
+		margin: 100px 0 90px;
+		font-size: 48px;
+		font-family: 'Lato-bold';
+
+		&_blue {
+			color: $blue-color;
+		}
+	}
+
+	&__title-second {
+		margin-bottom: 10px;
+		font-size: 20px;
+		font-family: 'Lato-bold';
+	}
+
+	&__list {
+		margin-top: 0;
+		margin-bottom: 78px;
+		padding-left: 12px;
+		line-height: 1.4;
+		//font-family: 'Lato';
+	}
+
+	&__list-item {
+		font-size: 20px;
+		list-style-type: none;
+		//font-weight: 400;
+	}
+
+	&__button {
+		width: 183px;
+		height: 43px;
+		padding: 8px 16px;
+		border-radius: 4px;
+		cursor: pointer;
+
+		&_blue {
+			background-color: $blue-color;
+			color: white;
+			margin-right: 30px;
+			border: 1px solid white;
+		}
+	}
+
+}
