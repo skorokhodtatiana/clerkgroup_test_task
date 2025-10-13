@@ -5,15 +5,14 @@ $blue-color: #3E9CDC;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	// justify-content: center;
+	padding-bottom: 9.5rem;
 	background-image: url('../../assets/images/footer-bg.svg');
 	background-color: $footer-bg;
 	background-size: cover;
 
 	&__title {
-		padding-top: 94px;
+		padding-top: 7rem;
 		color: white;
-		//padding-top: 84px;
 		font-size: 36px;
 
 		&_blue {
@@ -22,29 +21,33 @@ $blue-color: #3E9CDC;
 	}
 
 	&__title-second {
-		margin-bottom: 5rem;
+		margin-bottom: 4rem;
 		color: white;
 	}
 
 	&__steps {
 		display: flex;
-		margin-left: 8rem;
-		margin-bottom: 6rem;
+		margin-bottom: 5.5rem;
+		padding-left: 6rem;
 
-		// &:last-child {
-		// 	color: green;
-
-		// 	.step-icon__dots {
-		// 		display: none;
-		// 	}
-		// }
-
-		&:nth-last-child(1) {
-			background-color: green;
+		.last-item {
+			display: none;
 		}
 	}
 
+	&__steps-description {
+		margin-bottom: 6rem;
+		color: white;
+	}
+
+	&__steps-text {
+		margin-left: 2rem;
+	}
+
 	&__button {
+		position: absolute;
+		top: 11.5rem;
+		right: 25rem;
 		width: 370px;
 		height: 48px;
 		background-color: $blue-color;
