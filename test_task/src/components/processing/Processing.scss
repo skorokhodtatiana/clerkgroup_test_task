@@ -2,7 +2,6 @@ $footer-bg: #272733;
 $blue-color: #3E9CDC;
 
 .processing {
-	height: 500px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -23,11 +22,26 @@ $blue-color: #3E9CDC;
 	}
 
 	&__title-second {
+		margin-bottom: 5rem;
 		color: white;
 	}
 
 	&__steps {
 		display: flex;
+		margin-left: 8rem;
+		margin-bottom: 6rem;
+
+		// &:last-child {
+		// 	color: green;
+
+		// 	.step-icon__dots {
+		// 		display: none;
+		// 	}
+		// }
+
+		&:nth-last-child(1) {
+			background-color: green;
+		}
 	}
 
 	&__button {
