@@ -20,7 +20,7 @@ const Form = () => {
 
 	return (
 		<>
-			<form className="form">
+			<form className="form" method="post" encType="multipart/form-data">
 				<select name="typeSystem" className="form__select">
 					<option key="" value="Выберите тип системы" selected disabled>Выберите тип системы</option>
 					{arrItemForSelect.map((item, index) => (

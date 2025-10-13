@@ -10,7 +10,6 @@ $color-placeholder: #272733;
 		width: 373px;
 		height: 48px;
 		padding: 0 10px;
-		//margin-right: 2rem;
 		border-radius: 4px;
 		font-size: 18px;
 		opacity: 85%;
@@ -19,6 +18,8 @@ $color-placeholder: #272733;
 
 	&__progress-block {
 		grid-column: span 2;
+		align-self: self-end;
+		line-height: 1.6;
 	}
 
 	&__progress-text {
