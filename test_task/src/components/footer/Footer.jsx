@@ -1,15 +1,10 @@
 
-// import walet from '../../assets/images/footer/wallet.svg';
-// import yandex from '../../assets/images/footer/yandex.svg';
-// import web from '../../assets/images/footer/web.svg';
-// import mail from '../../assets/images/footer/mail.svg';
-// import vk from '../../assets/images/footer/vk.svg';
 import * as Icons from '../icons/footer/Icons';
 import './footer.scss';
 
 const Footer = () => {
 	return (
-		<div>
+		<div className="footer-container">
 			<div className="footer">
 				<div className="footer__author">© 2018 «LOREMIPSUM.NET» Все права защищены.</div>
 				<div className="footer__verticle-line"></div>
