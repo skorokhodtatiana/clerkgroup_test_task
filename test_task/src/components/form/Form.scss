@@ -1,6 +1,7 @@
 $color-placeholder: #272733;
 
 .form {
+	position: relative;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(3, 1fr);
@@ -14,11 +15,17 @@ $color-placeholder: #272733;
 		font-size: 18px;
 		opacity: 85%;
 		color: $color-placeholder;
+		cursor: pointer;
+		appearance: none;
+		background-image: url('../../assets/images/selectionIcon.svg');
+		background-repeat: no-repeat;
+		background-position: right 3% bottom 50%;
 	}
 
 	&__progress-block {
 		grid-column: span 2;
 		align-self: self-end;
+		font-size: 17px;
 		line-height: 1.6;
 	}
 
@@ -28,8 +35,13 @@ $color-placeholder: #272733;
 		color: white;
 	}
 
+	&__progress-percent {
+		margin-right: 8px;
+	}
+
 	&__progress {
 		width: 48rem;
+		opacity: 70%;
 	}
 
 	&__upload-file {
@@ -55,5 +67,10 @@ $color-placeholder: #272733;
 
 	&__label-text {
 		color: $color-placeholder;
+	}
+
+	&__info-text {
+		color: white;
+		font-size: 15px;
 	}
 }
