@@ -25,7 +25,7 @@ const Footer = () => {
 					<img className="footer__item-img" src={Icons.web} alt="web"></img>
 					Web Money
 				</div>
-				<div class="footer__verticle-line"></div>
+				<div className="footer__verticle-line"></div>
 				<a className="footer__link" href="mailto:info@hexlet.io">
 					<img className="footer__item-img" src={Icons.mail} alt="mail"></img>
 					info@ipsum228.com
