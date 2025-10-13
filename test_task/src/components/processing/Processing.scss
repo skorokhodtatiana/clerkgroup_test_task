@@ -1,17 +1,18 @@
 $footer-bg: #272733;
 $blue-color: #3E9CDC;
+$second-title: #BBBBBB;
 
 .processing {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-bottom: 9.5rem;
+	padding-bottom: 5.5rem;
 	background-image: url('../../assets/images/footer-bg.svg');
 	background-color: $footer-bg;
 	background-size: cover;
 
 	&__title {
-		padding-top: 7rem;
+		padding-top: 5.5rem;
 		color: white;
 		font-size: 36px;
 
@@ -21,14 +22,15 @@ $blue-color: #3E9CDC;
 	}
 
 	&__title-second {
-		margin-bottom: 4rem;
-		color: white;
+		margin-bottom: 5rem;
+		color: $second-title;
+		font-size: 18px;
 	}
 
 	&__steps {
 		display: flex;
-		margin-bottom: 5.5rem;
-		padding-left: 6rem;
+		margin-bottom: 5rem;
+		padding-left: 3rem;
 
 		.last-item {
 			display: none;
@@ -50,6 +52,7 @@ $blue-color: #3E9CDC;
 		right: 25rem;
 		width: 370px;
 		height: 48px;
+		font-size: 15px;
 		background-color: $blue-color;
 		color: white;
 		border: 1px solid white;

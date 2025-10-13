@@ -7,19 +7,20 @@ $blue-color: #3E9CDC;
 	grid-template-rows: auto 60px;
 
 	&__image {
+		margin-left: 1rem;
 		position: relative;
 	}
 
 	&__icon {
 		position: absolute;
-		top: 25%;
-		right: 25%;
+		top: 22%;
+		right: 10%;
 	}
 
 	&__dots {
 		display: flex;
 		align-items: center;
-
+		margin-left: 1rem;
 	}
 
 	&__dot {
@@ -42,5 +43,6 @@ $blue-color: #3E9CDC;
 		align-self: start;
 		width: 185px;
 		color: white;
+		text-align: center;
 	}
 }
