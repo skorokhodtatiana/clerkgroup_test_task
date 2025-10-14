@@ -1,5 +1,5 @@
-import Button from '../button/button';
-import './main.scss';
+import Button from '../button/Button';
+import './Main.scss';
 
 const Main = () => {
 	return (

@@ -1,6 +1,6 @@
 import Step from '../step/Step';
 import * as Icons from '../icons/step/Icons-step';
-import './processing.scss';
+import './Processing.scss';
 import Form from '../form/Form';
 
 const Processing = () => {
