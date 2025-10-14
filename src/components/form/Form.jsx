@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import Input from '../input/Input';
-import Button from '../button/button';
+import Button from '../button/Button';
 import upload from '@/assets/images/processing/upload.svg';
 import './Form.scss';
 

@@ -1,6 +1,6 @@
 import Nav from '../nav/Nav';
 
-import './header.scss';
+import './Header.scss';
 
 const Header = () => {
 	return (
