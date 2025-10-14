@@ -11,7 +11,7 @@ export default defineConfig({
       },
     }),
   ],
-  base: './',
+  base: '/clerkgroup.github.io',
   resolve: {
     alias: {
       '@': path.resolve('./src'),
