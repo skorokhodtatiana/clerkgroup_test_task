@@ -46,13 +46,12 @@ $footer-item: #C3C3C3;
 	&__link {
 		display: flex;
 		margin-right: 2.5rem;
-		color: $footer-item;
+		color: white;;
 		text-decoration: none;
 
 		&:hover,
 		&:active,
 		&:focus {
-			color: white;
 			text-decoration: underline;
 		}
 	}
