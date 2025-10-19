@@ -1,6 +1,4 @@
 import './App.scss'
-// import { createBrowserRouter } from "react-router";
-// import { RouterProvider } from "react-router/dom";
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/home/HomePage';
 import PageError from './pages/pageError/PageError';
@@ -8,20 +6,6 @@ import Footer from './components/footer/Footer';
 import AboutUs from './pages/aboutUs/AboutUs';
 
 function App() {
-	// const router =  createBrowserRouter([
-	// 	{
-	// 		path: "/",
-	// 		Component: HomePage,
-	// 	},
-	// 	{
-	// 		path: "/error",
-	// 		Component: PageError,
-	// 	},
-	// 	{
-	// 		path: "/aboutUs",
-	// 		Component: AboutUs,
-	// 	}
-	// ]);
 
 	return (
 		<HashRouter>
@@ -32,7 +16,6 @@ function App() {
 			</Routes>
 			<Footer></Footer>
 		</HashRouter>
-		// <RouterProvider router={router} />
 	)
 }
 

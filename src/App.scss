@@ -2,7 +2,6 @@
 
 @font-face {
 	font-family: 'Lato';
-	// src: url('../../assets/fonts/Lato/Lato-Regular.ttf');
 	src: url('../src/assets/fonts/Lato/Lato-Regular.ttf');
 	font-style: normal;
 }
@@ -14,10 +13,3 @@
 	grid-template-rows: auto 1fr 80px;
 	font-family: 'Lato', sans-serif;
 }
-
-// .top-block {
-// 	display: grid;
-// 	grid-template-columns: 1fr;
-// 	grid-template-rows: 100px 1fr;
-// 	background: url('../src/assets/images/main-bg.jpg') no-repeat;
-// }
