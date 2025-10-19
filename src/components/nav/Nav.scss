@@ -2,7 +2,7 @@ $blue-color: #3E9CDC;
 
 @font-face {
 	font-family: 'Lato';
-	src: url(../../assets/fonts/Lato/Lato-Regular.ttf);
+	src: url('../../assets/fonts/Lato/Lato-Regular.ttf');
 }
 
 .nav {
@@ -13,23 +13,26 @@ $blue-color: #3E9CDC;
 		color: white;
 		font-size: 13px;
 		font-family: 'Lato', sans-serif;
-		//font-weight: 600;
+		cursor: pointer;
 
 		&:hover,
 		&:active,
 		&:focus {
-			text-decoration: underline;
 			color: $blue-color;
 		}
 
-		&_blue {
-			color: $blue-color;
+		// &_blue {
+		// 	color: $blue-color;
 
-			&:hover,
-			&:active,
-			&:focus {
-				text-decoration: underline;
-			}
-		}
+		// 	&:hover,
+		// 	&:active,
+		// 	&:focus {
+		// 		text-decoration: underline;
+		// 	}
+		// }
+	}
+
+	.active {
+		color: $blue-color;
 	}
 }

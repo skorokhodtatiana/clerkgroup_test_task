@@ -4,20 +4,17 @@ $blue-color: #3E9CDC;
 @font-face {
 	font-family: 'Raleway';
 	// todo сделать алиас
-	src: url('../../assets/fonts/Raleway');
-	// font-weight: 800;
+	src: url('../../assets/fonts/Raleway/Raleway-VariableFont_wght.ttf');
 }
 
 .header {
 	display: flex;
 	justify-content: space-around;
-	// justify-content: space-between;
 	align-items: center;
-
 	position: sticky;
 	top: 0;
+	height: 100px;
 	z-index: 2;
-
 	background-color: $background-black;
 	opacity: 90%;
 

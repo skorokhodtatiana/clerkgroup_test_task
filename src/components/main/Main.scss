@@ -3,12 +3,13 @@ $color-button: #2A2B30;
 
 @font-face {
 	font-family: 'Lato-bold';
-	src: url(../../assets/fonts/Lato/Lato-Bold.ttf);
+	src: url('../../assets/fonts/Lato/Lato-Bold.ttf');
 }
 
 .main {
 	display: grid;
 	grid-template-columns: 18rem 1fr;
+	min-height: 750px;
 
 	&__container {
 		grid-column: 2;
