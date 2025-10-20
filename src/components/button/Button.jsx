@@ -2,6 +2,7 @@ const Button = ({
 	className,
 	disabled,
 	children,
+	handleClick,
 	type = 'button',
 	...props
 }) => {
@@ -10,6 +11,7 @@ const Button = ({
 		<button className={ className }
 			disabled={ disabled }
 			type={ type }
+			onClick={handleClick}
 			{...props}
 		>
 			{ children }
