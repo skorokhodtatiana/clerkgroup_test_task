@@ -2,9 +2,13 @@ import Step from '../step/Step';
 import * as Icons from '../icons/step/Icons-step';
 import './Processing.scss';
 import Form from '../form/Form';
+import { useAppContext } from '../../context/AppContext/AppContext';
 
 const Processing = () => {
-	
+	const { value } = useAppContext();
+
+	console.log("processing " + value)
+
 	return (
 		<>
 			<div className="processing">
