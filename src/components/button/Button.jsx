@@ -1,3 +1,5 @@
+import './Button.scss';
+
 const Button = ({
 	className,
 	disabled,
@@ -8,7 +10,7 @@ const Button = ({
 }) => {
 
 	return (
-		<button className={ className }
+		<button className={ 'button ' + className }
 			disabled={ disabled }
 			type={ type }
 			onClick={handleClick}
