@@ -19,11 +19,16 @@ $blue-color: #3E9CDC;
 	opacity: 90%;
 
 	&__logo {
-		padding: 34px 0 34px 46px;
+		padding: 10px;
 		color: white;
 		font-family: 'Raleway', sans-serif;
-		font-size: 28px;
+		font-size: 24px;
 		font-weight: 800;
+
+		@media screen and (min-width: 1024px) {
+			padding: 34px 0 34px 46px;
+			font-size: 28px;
+		}
 
 		&_blue {
 			color: $blue-color;
