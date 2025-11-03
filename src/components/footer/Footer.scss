@@ -1,51 +1,85 @@
+@font-face {
+	font-family: 'Lato-normal';
+	src: url('../../assets/fonts/Lato/Lato-Light.ttf');
+	font-style: normal;
+	font-weight: 400;
+}
+
 $footer-bg: #3D4050;
 $footer-item: #C3C3C3;
 
-.footer-container {
-	display: grid;
-	grid-template-columns: repeat(10, 1fr);
-	grid-template-rows: auto;
-	align-items: center;
-	background-color: $footer-bg;
-}
-
 .footer {
-	grid-column: 2/span 8;
+	display: flex;
+	flex-direction: column-reverse;
+	background-color: $footer-bg;
+	padding: 10px;
+	font-family: "Lato-normal", sans-serif;
+
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-size: 13px;
 
-	&__verticle-line {
-		height: 18px;
-		border-left: 1px solid $footer-item;
-		margin: 0 2.5rem;
+	@media screen and (min-width: 1024px) {
+		flex-direction: row;
 	}
 
 	&__author {
 		position: relative;
-		padding-right: 14px;
+		padding: 10px;
+		font-size: 10px;
 		color: white;
+
+		@media screen and (min-width: 1024px) {
+			padding-right: 38px;
+			padding-inline: 38px;
+			font-size: 13px;
+		}
+	}
+
+	&__options-payment {
+		display: flex;
+		margin-bottom: 10px;
+
+		@media screen and (min-width: 1024px) {
+			margin-bottom: 0;
+			padding-left: 36px;
+			padding-right: 46px;
+			height: 18px;
+			border-left: 1px solid $footer-item;
+		}
 	}
 
 	&__item {
 		display: flex;
 		align-items: center;
-		margin-right: 2.5rem;
+		margin-right: 10px;
 		color: $footer-item;
 
 		&:last-child {
 			margin-right: 0;
 		}
+
+		@media screen and (min-width: 1024px) {
+			margin-right: 2.5rem;
+		}
 	}
 
-	&__item-img {
-		margin-right: 10px;
+	&__item-text {
+		margin-left: 5px;
+		font-size: 10px;
+
+		@media screen and (min-width: 1024px) {
+			margin-left: 10px;
+			font-size: 13px;
+		}
 	}
 
 	&__link {
 		display: flex;
-		margin-right: 2.5rem;
+		align-items: center;
+		margin-right: 10px;
 		color: white;;
 		text-decoration: none;
 
