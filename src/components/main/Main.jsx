@@ -28,7 +28,7 @@ const Main = () => {
 						<li className="main__list-item">-&nbsp;&nbsp;Sit voluptatem accusantium doloremque laudantium</li>
 						<li className="main__list-item">-&nbsp;&nbsp;Sed ut perspiciatis, unde omnis iste natus error</li>
 					</ul>
-					<div>
+					<div className="main__flex">
 						<Button className="main__button main__button_blue" children='ЗАКАЗАТЬ'></Button>
 						<Button className="main__button" children='ПОДРОБНЕЕ' handleClick={changeContext}></Button>
 					</div>

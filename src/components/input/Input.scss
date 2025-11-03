@@ -1,7 +1,7 @@
 $color-placeholder: #272733;
 
 .input {
-	width: 354px;
+	width: 95%;
 	height: 48px;
 	padding: 0 10px;
 	font-size: 18px;
@@ -13,5 +13,9 @@ $color-placeholder: #272733;
 	&::placeholder {
 		color: $color-placeholder;
 		font-size: 18px;
+	}
+
+	@media screen and (min-width: 1024px) {
+		width: 354px;
 	}
 }

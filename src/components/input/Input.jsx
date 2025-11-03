@@ -3,7 +3,6 @@ import './Input.scss';
 const Input = ({
 			name,
 			inputClass,
-			containerClass,
 			placeholder,
 			inputRef,
 			value,
@@ -13,7 +12,7 @@ const Input = ({
 		}) => {
 
 		return (
-			<span className={containerClass}>
+			<>
 				<input
 					className={'input ' + inputClass}
 					name={name}
@@ -22,8 +21,8 @@ const Input = ({
 					value={value}
 					type={type}
 					id={id}
-					{...props} />
-			</span>
+					{...props}/>
+			</>
 		);
 	}
 

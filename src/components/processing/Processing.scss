@@ -12,25 +12,43 @@ $second-title: #BBBBBB;
 	background-size: cover;
 
 	&__title {
-		padding-top: 5.5rem;
+		padding-top: 3rem;
 		color: white;
-		font-size: 36px;
+		font-size: 24px;
 
 		&_blue {
 			color: $blue-color;
 		}
+
+		@media screen and (min-width: 1024px) {
+			padding-top: 5.5rem;
+			font-size: 36px;
+		}
 	}
 
 	&__title-second {
-		margin-bottom: 5rem;
+		margin-bottom: 2rem;
+		text-align: center;
 		color: $second-title;
-		font-size: 18px;
+		font-size: 14px;
+
+		@media screen and (min-width: 1024px) {
+			margin-bottom: 5rem;
+			text-align: start;
+			font-size: 18px;
+		}
 	}
 
 	&__steps {
 		display: flex;
+		flex-direction: column;
+		align-items: center;
 		margin-bottom: 5rem;
 		padding-left: 3rem;
+
+		@media screen and (min-width: 1024px) {
+			flex-direction: row;
+		}
 
 		.last-item {
 			display: none;
@@ -48,13 +66,17 @@ $second-title: #BBBBBB;
 
 	&__button {
 		margin-top: 24px;
-		width: 370px;
-		height: 48px;
+		padding: 14px 120px;
 		font-size: 15px;
 		background-color: $blue-color;
 		color: white;
 		border: 1px solid white;
 		border-radius: 4px;
 		cursor: pointer;
+
+		@media screen and (min-width: 1024px) {
+			width: 370px;
+			height: 48px;
+		}
 	}
 }

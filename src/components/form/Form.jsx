@@ -50,8 +50,8 @@ const Form = () => {
 					))}
 					<option></option>
 				</select>
-				<Input name="type-system" placeholder="Ваш e-mail" value={emailValue} onChange={(e) => setEmailValue(e.target.value)}></Input>
-				<Input name="type-system" placeholder="Ваше имя" value={nameValue} onChange={(e) => setNameValue(e.target.value)}></Input>
+				<Input inputClass={"form__input"} name="type-system" placeholder="Ваш e-mail" value={emailValue} onChange={(e) => setEmailValue(e.target.value)}></Input>
+				<Input inputClass="form__input" name="type-system" placeholder="Ваше имя" value={nameValue} onChange={(e) => setNameValue(e.target.value)}></Input>
 				<div className="form__progress-block">
 					<div className="form__progress-text">
 						<span>Sed ut perspiciatis, unde omnis iste natus</span>
@@ -63,7 +63,9 @@ const Form = () => {
 					<img className="form__label-img" src={upload} alt="upload"></img>
 					<span className="form__label-text">ПРИКРЕПИТЬ ФАЙЛ</span>
 				</label>
-				<Input inputClass="form__upload-file" ref={uploadRef} id="file-upload" name="file-upload" type="file" placeholder="Прикрепить файл" value={fileValue} onChange={UploadFile}></Input>
+				<span>
+					<Input inputClass="form__upload-file" ref={uploadRef} id="file-upload" name="file-upload" type="file" placeholder="Прикрепить файл" value={fileValue} onChange={UploadFile}></Input>
+				</span>
 				<Button type="submit" className={'processing__button'} children={'ОТПРАВИТЬ'}></Button>
 			</form>
 		</>

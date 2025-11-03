@@ -18,9 +18,13 @@ $blue-color: #3E9CDC;
 	}
 
 	&__dots {
-		display: flex;
-		align-items: center;
-		margin-left: 1rem;
+		display: none;
+
+		@media screen and (min-width: 1024px) {
+			display: flex;
+			align-items: center;
+			margin-left: 1rem;
+		}
 	}
 
 	&__dot {
@@ -38,11 +42,17 @@ $blue-color: #3E9CDC;
 	}
 
 	&__text {
-		margin-top: 18px;
+		margin-top: 6px;
+		margin-bottom: 26px;
 		grid-column: span 3;
 		align-self: start;
 		width: 185px;
 		color: white;
 		text-align: center;
+
+		@media screen and (min-width: 1024px) {
+			margin-top: 18px;
+			margin-bottom: 0;
+		}
 	}
 }

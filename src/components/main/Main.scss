@@ -8,27 +8,45 @@ $color-button: #2A2B30;
 
 .main {
 	display: grid;
-	grid-template-columns: 18rem 1fr;
-	min-height: 750px;
+	grid-template-columns: 1fr;
+
+	@media screen and (min-width: 1024px) {
+		grid-template-columns: 18rem 1fr;
+		min-height: 750px;
+	}
 
 	&__container {
-		grid-column: 2;
+		@media screen and (min-width: 1024px) {
+			grid-column: 2;
+		}
 	}
 
 	&__title {
-		margin: 100px 0 90px;
-		font-size: 48px;
+		margin: 40px 0 30px;
+		text-align: center;
+		font-size: 24px;
 		font-family: 'Lato-bold';
 
 		&_blue {
 			color: $blue-color;
 		}
+
+		@media screen and (min-width: 1024px) {
+			margin: 100px 0 90px;
+			text-align: start;
+			font-size: 48px;
+		}
 	}
 
 	&__title-second {
 		margin-bottom: 10px;
+		margin-left: 28px;
 		font-size: 20px;
 		font-family: 'Lato-bold';
+
+		@media screen and (min-width: 1024px) {
+			margin-left: 0;
+		}
 	}
 
 	&__list {
@@ -43,10 +61,21 @@ $color-button: #2A2B30;
 		list-style-type: none;
 	}
 
+	&__flex {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@media screen and (min-width: 1024px) {
+			display: block;
+		}
+	}
+
 	&__button {
 		width: 183px;
 		height: 43px;
 		padding: 8px 16px;
+		margin-bottom: 30px;
 		border-radius: 4px;
 		color: $color-button;
 		cursor: pointer;
@@ -54,8 +83,13 @@ $color-button: #2A2B30;
 		&_blue {
 			background-color: $blue-color;
 			color: white;
-			margin-right: 30px;
+			margin-bottom: 10px;
 			border: 1px solid white;
+
+			@media screen and (min-width: 1024px) {
+				margin-right: 30px;
+				margin-bottom: 0;
+			}
 		}
 	}
 }
