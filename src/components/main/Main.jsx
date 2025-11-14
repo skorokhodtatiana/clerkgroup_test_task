@@ -5,11 +5,7 @@ import { useAppContext } from '../../context/AppContext/AppContext';
 const Main = () => {
 	const { value, setValue } = useAppContext();
 	const changeContext = () => {
-		if(value === null) {
-			setValue('Первый результат');
-		} else {
-			setValue('Второй результат');
-		}
+		value === null ? setValue('Первый результат') : setValue('Второй результат');
 	}
 
 	return (

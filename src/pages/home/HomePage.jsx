@@ -13,7 +13,7 @@ const MainPage = () => {
 		<MyProvider value={{ value, setValue }}>
 			<div className='top-block'>
 				<Header></Header>
-				<Main setValue={setValue}></Main>
+				<Main></Main>
 			</div>
 				<Processing></Processing>
 			</MyProvider>
