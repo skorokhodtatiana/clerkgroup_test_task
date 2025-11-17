@@ -63,20 +63,4 @@ $second-title: #BBBBBB;
 	&__steps-text {
 		margin-left: 2rem;
 	}
-
-	&__button {
-		margin-top: 24px;
-		padding: 14px 120px;
-		font-size: 15px;
-		background-color: $blue-color;
-		color: white;
-		border: 1px solid white;
-		border-radius: 4px;
-		cursor: pointer;
-
-		@media screen and (min-width: 1024px) {
-			width: 370px;
-			height: 48px;
-		}
-	}
 }

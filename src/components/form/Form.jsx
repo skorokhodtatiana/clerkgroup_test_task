@@ -8,29 +8,58 @@ const Form = () => {
 	const [systemValue, setSystemValue] = useState('Выберите тип системы');
 	const [emailValue, setEmailValue] = useState('');
 	const [nameValue, setNameValue] = useState('');
+
 	const [percentValue, setPercent] = useState(0);
-	const [fileValue, setFileValue] = useState('');
+	const [nameFile, setNameFile] = useState('Sed ut perspiciatis, unde omnis iste natus');
+	const [fileValue, setFileValue] = useState(null);
+	const [progress, setProgress] = useState(0);
 
-	const uploadRef = useRef();
-	const statusRef = useRef();
-	const progressRef = useRef();
+	const uploadRef = useRef(null);
+	// const statusRef = useRef(null);
+	// const progressRef = useRef(null);
 
-	const UploadFile = () => {
-		setFileValue(fileValue);
-		var formData = new FormData();
-		formData.append("file", fileValue);
-		var xhr = new XMLHttpRequest();
-		xhr.upload.addEventListener("progress", ProgressHandler, false);
-		xhr.open("POST", "some path");
-		xhr.send(formData);
+	const uploadFile = (event) => {
+		if (event.target.files && event.target.files[0]) {
+			setFileValue(event.target.files[0]);
+			setNameFile(uploadRef.current.files[0].name);
+		}
 	};
 
 	const ProgressHandler = (e) => {
-		var percent = (e.loaded / e.total) * 100;
-		statusRef.current.innerHTML = Math.round(percent) + "% uploaded...";
-		setPercent(percent)
-		progressRef.current.value = Math.round(percent);
+		//const percent = (e.loaded / e.total) * 100;
+		//statusRef.current.textContent = Math.round(percent) + "% uploaded...";
+		//setPercent(Math.round(percent) + '% uploaded...');
+		//progressRef.current.value = Math.round(percent);
+
+		const timer = setInterval(() => {
+			setProgress((prevProgress) => {
+				if (prevProgress >= 100) {
+					clearInterval(timer);
+					//setIsLoading(false);
+					return 100;
+				}
+				return prevProgress + 10;
+			});
+
+			setPercent((prevProgress) => {
+				if (prevProgress >= 100) {
+					clearInterval(timer);
+					return 100;
+				}
+				return prevProgress + 10;
+			});
+		}, 200);
 	};
+
+	const handleSubmit = (event) => {
+		event.preventDefault();
+		const formData = new FormData();
+		formData.append("file", fileValue);
+		const xhr = new XMLHttpRequest();
+		xhr.upload.addEventListener("progress", ProgressHandler, false);
+		xhr.open("POST", "some path");
+		xhr.send(formData);
+	}
 
 	const arrItemForSelect = [
 		'Sed ut perspiciatis',
@@ -42,7 +71,7 @@ const Form = () => {
 
 	return (
 		<>
-			<form className="form" method="post" encType="multipart/form-data">
+			<form className="form" method="post" encType="multipart/form-data" onSubmit={handleSubmit}>
 				<select name="typeSystem" className="form__select" onChange={(e) => setSystemValue(e.target.value)} value={systemValue}>
 					<option key="" value="Выберите тип системы" disabled>Выберите тип системы</option>
 					{arrItemForSelect.map((item, index) => (
@@ -54,19 +83,21 @@ const Form = () => {
 				<Input inputClass="form__input" name="type-system" placeholder="Ваше имя" value={nameValue} onChange={(e) => setNameValue(e.target.value)}></Input>
 				<div className="form__progress-block">
 					<div className="form__progress-text">
-						<span>Sed ut perspiciatis, unde omnis iste natus</span>
-						<span className="form__progress-percent" ref={statusRef}>{percentValue + "%"}</span>
+						<span>{ nameFile }</span>
+						{/* <span className="form__progress-percent" ref={statusRef}>{percentValue + "%"}</span> */}
+						<span className="form__progress-percent">{percentValue + ' %'}</span>
 					</div>
-					<progress className="form__progress " ref={progressRef} id="progressBar" value="0" max="100"></progress>
+					{/* <progress className="form__progress " ref={progressRef} value={progress} max="100"></progress> */}
+					<progress className="form__progress " value={progress} max="100"></progress>
 				</div>
 				<label className="form__label-upload-file" htmlFor="file-upload">
 					<img className="form__label-img" src={upload} alt="upload"></img>
 					<span className="form__label-text">ПРИКРЕПИТЬ ФАЙЛ</span>
 				</label>
 				<span>
-					<Input inputClass="form__upload-file" ref={uploadRef} id="file-upload" name="file-upload" type="file" placeholder="Прикрепить файл" value={fileValue} onChange={UploadFile}></Input>
+					<Input ref={uploadRef} inputClass="form__upload-file" id="file-upload" name="file-upload" type="file" placeholder="Прикрепить файл" onChange={uploadFile}></Input>
 				</span>
-				<Button type="submit" className={'processing__button'} children={'ОТПРАВИТЬ'}></Button>
+				<Button type="submit" className={'form__button'} children={'ОТПРАВИТЬ'} disabled={!fileValue || !emailValue || !nameValue}></Button>
 			</form>
 		</>
 	)

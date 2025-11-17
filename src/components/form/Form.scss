@@ -120,4 +120,29 @@ $focusButton: #3E9CDC;
 			grid-column: auto;
 		}
 	}
+
+	&__button {
+		margin-top: 24px;
+		padding: 14px 120px;
+		font-size: 15px;
+		background-color: $focusButton;
+		color: white;
+		border: 1px solid white;
+		border-radius: 4px;
+		cursor: pointer;
+
+		&:disabled {
+			background-color: gray;
+
+			&:hover,
+			&:focus {
+				transform: none;
+			}
+		}
+
+		@media screen and (min-width: 1024px) {
+			width: 370px;
+			height: 48px;
+		}
+	}
 }
