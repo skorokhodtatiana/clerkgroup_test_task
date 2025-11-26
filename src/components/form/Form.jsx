@@ -23,6 +23,13 @@ const Form = () => {
 			setFileValue(event.target.files[0]);
 			setNameFile(uploadRef.current.files[0].name);
 		}
+
+		const formData = new FormData();
+		formData.append("file", fileValue);
+		const xhr = new XMLHttpRequest();
+		xhr.upload.addEventListener("progress", ProgressHandler, false);
+		xhr.open("POST", "some path");
+		xhr.send(formData);
 	};
 
 	const ProgressHandler = (e) => {
@@ -53,12 +60,19 @@ const Form = () => {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		const formData = new FormData();
-		formData.append("file", fileValue);
-		const xhr = new XMLHttpRequest();
-		xhr.upload.addEventListener("progress", ProgressHandler, false);
-		xhr.open("POST", "some path");
-		xhr.send(formData);
+		console.log('Отправлено');
+		setFileValue('');
+		setEmailValue('');
+		setNameValue('');
+		setNameFile('Sed ut perspiciatis, unde omnis iste natus');
+		setPercent(0);
+		setProgress(0);
+		// const formData = new FormData();
+		// formData.append("file", fileValue);
+		// const xhr = new XMLHttpRequest();
+		// xhr.upload.addEventListener("progress", ProgressHandler, false);
+		// xhr.open("POST", "some path");
+		// xhr.send(formData);
 	}
 
 	const arrItemForSelect = [
