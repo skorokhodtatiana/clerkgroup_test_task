@@ -18,6 +18,7 @@ $focusButton: #3E9CDC;
 		height: 48px;
 		padding: 0 10px;
 		grid-column: 1/span1;
+		border: 1px solid gray;
 		border-radius: 4px;
 		font-size: 18px;
 		opacity: 85%;
@@ -29,7 +30,7 @@ $focusButton: #3E9CDC;
 		background-position: right 3% bottom 50%;
 
 		@media screen and (min-width: 1024px) {
-			width: 373px;
+			//width: 373px;
 			grid-column: auto;
 		}
 	}
@@ -117,6 +118,10 @@ $focusButton: #3E9CDC;
 	&__input {
 		grid-column: 1/span1;
 
+		&_error {
+			border: 1px solid red;
+		}
+
 		@media screen and (min-width: 1024px) {
 			grid-column: auto;
 		}
@@ -142,8 +147,13 @@ $focusButton: #3E9CDC;
 		}
 
 		@media screen and (min-width: 1024px) {
-			width: 370px;
+			//width: 370px;
 			height: 48px;
 		}
+	}
+
+	&__error {
+		position: absolute;
+		color: #ff0000;
 	}
 }

@@ -13,6 +13,7 @@ const Form = () => {
 	const [nameFile, setNameFile] = useState('Sed ut perspiciatis, unde omnis iste natus');
 	const [fileValue, setFileValue] = useState(null);
 	const [progress, setProgress] = useState(0);
+	const [error, setError] = useState('');
 
 	const uploadRef = useRef(null);
 	// const statusRef = useRef(null);
@@ -31,6 +32,21 @@ const Form = () => {
 		xhr.open("POST", "some path");
 		xhr.send(formData);
 	};
+
+	const validateEmail = (emailValue) => {
+		const emailRegex = /\S+@\S+\.\S+/;
+		return emailRegex.test(emailValue);
+	};
+
+	const checkEmail = (email) => {
+		if (!validateEmail(emailValue)) {
+			setError('Неправильный формат email');
+			setEmailValue(email.target.value);
+		} else {
+			setEmailValue(email.target.value);
+			setError('');
+		}
+	}
 
 	const ProgressHandler = (e) => {
 		//const percent = (e.loaded / e.total) * 100;
@@ -93,7 +109,10 @@ const Form = () => {
 					))}
 					<option></option>
 				</select>
-				<Input inputClass={"form__input"} name="type-system" placeholder="Ваш e-mail" value={emailValue} onChange={(e) => setEmailValue(e.target.value)}></Input>
+				<div>
+					<Input type="email" inputClass={ error ? "form__input form__input_error" : "form__input"} name="type-system" required placeholder="Ваш e-mail" value={emailValue} onChange={ checkEmail }></Input>
+					{error && <div className="form__error">{error}</div>}
+				</div>
 				<Input inputClass="form__input" name="type-system" placeholder="Ваше имя" value={nameValue} onChange={(e) => setNameValue(e.target.value)}></Input>
 				<div className="form__progress-block">
 					<div className="form__progress-text">
@@ -111,7 +130,7 @@ const Form = () => {
 				<span>
 					<Input ref={uploadRef} inputClass="form__upload-file" id="file-upload" name="file-upload" type="file" placeholder="Прикрепить файл" onChange={uploadFile}></Input>
 				</span>
-				<Button type="submit" className={'form__button'} children={'ОТПРАВИТЬ'} disabled={!fileValue || !emailValue || !nameValue}></Button>
+				<Button type="submit" className={'form__button'} children={'ОТПРАВИТЬ'} disabled={!fileValue || !emailValue || !nameValue || error}></Button>
 			</form>
 		</>
 	)

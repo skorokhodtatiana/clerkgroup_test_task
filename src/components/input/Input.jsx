@@ -7,7 +7,7 @@ const Input = ({
 			inputRef,
 			value,
 			type='text',
-			id='',
+			id,
 			...props
 		}) => {
 
