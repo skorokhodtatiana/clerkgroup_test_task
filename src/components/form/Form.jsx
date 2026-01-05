@@ -39,7 +39,7 @@ const Form = () => {
 	};
 
 	const checkEmail = (email) => {
-		if (!validateEmail(emailValue)) {
+		if (!validateEmail(email.target.value)) {
 			setError('Неправильный формат email');
 			setEmailValue(email.target.value);
 		} else {
