@@ -70,6 +70,14 @@ $focusButton: #3E9CDC;
 		}
 	}
 
+	&__span-upload {
+		display: none;
+
+		@media screen and (min-width: 1024px) {
+			display: inline;
+		}
+	}
+
 	&__upload-file {
 		display: none;
 	}
@@ -139,15 +147,17 @@ $focusButton: #3E9CDC;
 
 		&:disabled {
 			background-color: gray;
+			opacity: 0.4;
 
 			&:hover,
+			&:active,
 			&:focus {
 				transform: none;
+				background-color: gray;
 			}
 		}
 
 		@media screen and (min-width: 1024px) {
-			//width: 370px;
 			height: 48px;
 		}
 	}

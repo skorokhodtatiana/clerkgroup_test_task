@@ -127,7 +127,7 @@ const Form = () => {
 					<img className="form__label-img" src={upload} alt="upload"></img>
 					<span className="form__label-text">ПРИКРЕПИТЬ ФАЙЛ</span>
 				</label>
-				<span>
+				<span className="form__span-upload">
 					<Input ref={uploadRef} inputClass="form__upload-file" id="file-upload" name="file-upload" type="file" placeholder="Прикрепить файл" onChange={uploadFile}></Input>
 				</span>
 				<Button type="submit" className={'form__button'} children={'ОТПРАВИТЬ'} disabled={!fileValue || !emailValue || !nameValue || error}></Button>
